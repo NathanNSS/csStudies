@@ -1,4 +1,5 @@
 import React from 'react';
+import Item from './Item';
 import styles from './styles.module.scss';
 
 export default function Lista() {
@@ -25,14 +26,10 @@ export default function Lista() {
             <ul>
                 {
                     tarefas.map((item) => (
-                        <li className={styles.item} key={item.id}>
-                            <h3>
-                                {item.nome}
-                            </h3>
-                            <span>
-                                {item.tempo}
-                            </span>
-                        </li>
+                        <Item 
+                            key={item.id}
+                            {...item}
+                        />
                     ))
                 }
             </ul>

@@ -33,7 +33,9 @@ export default class Formulario extends React.Component {
                     />
                 </div>
               
-                <Botao/>
+                <Botao>
+                    Entrar
+                </Botao>
             </form>
         )
     }
