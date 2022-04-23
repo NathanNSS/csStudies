@@ -1,15 +1,13 @@
+import { Tarefas } from '../../../types'
 import styles from '../styles.module.scss'
 
-interface Item {
-    nome: string;
-    tempo: string;
-}
 
-export default function Item({nome, tempo}:Item) {
+
+export default function Item({id, tarefa, tempo, selecionado, completado}:Tarefas) {
     return (
         <li className={styles.item}>
             <h3>
-                {nome}
+                {tarefa}
             </h3>
             <span>
                 {tempo}
