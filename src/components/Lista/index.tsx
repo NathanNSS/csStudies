@@ -3,7 +3,12 @@ import { Tarefas } from '../../types';
 import Item from './Item';
 import styles from './styles.module.scss';
 
-export default function Lista({ tarefas }: {tarefas: Tarefas[]}) {
+interface Props{
+    tarefas: Tarefas[];
+    selecionaTarefa: (selecionaTarefa:Tarefas) => void
+}
+
+export default function Lista({ tarefas, selecionaTarefa }: Props) {
 
     return (
         <aside className={styles.listaTarefas}>
@@ -13,7 +18,8 @@ export default function Lista({ tarefas }: {tarefas: Tarefas[]}) {
                     tarefas.map((item) => (
                         <Item
                             key={item.id}
-                            {...item}
+                            selecionaTarefa={selecionaTarefa}
+                            tarefas={item}
                         />
                     ))
                 }
