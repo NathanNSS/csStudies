@@ -60,7 +60,7 @@ export default class Formulario extends React.Component<{setTarefas: React.Dispa
                     />
                 </div>
               
-                <Botao>
+                <Botao type={'submit'}>
                     Adicionar
                 </Botao>
             </form>
