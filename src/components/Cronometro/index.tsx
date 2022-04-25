@@ -3,7 +3,7 @@ import styles from './styles.module.scss'
 
 import Botao from "../Botao";
 import Relogio from "./Relogio";
-import { tempoParaSegundo } from '../../utils/tempo';
+import { tempoParaSegundo } from '../../utils/utils';
 import { Tarefas } from '../../types';
 
 interface Props {

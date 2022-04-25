@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className={styles.AppStyle}>
-      <Formulario setTarefas={setTarefas} />
+      <Formulario propsTarefas={setTarefas} />
       <Lista tarefas={tarefas} selecionaTarefa={selecionaTarefa} />
       <Cronometro selecionado={selecionado} finalizaTarefa={finalizaTarefa}/>
     </div>
